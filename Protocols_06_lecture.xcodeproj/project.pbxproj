@@ -15,6 +15,9 @@
 		F9FB4B571E059186001202B6 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F9FB4B551E059186001202B6 /* LaunchScreen.storyboard */; };
 		F9FB4B621E059186001202B6 /* Protocols_06_lectureTests.m in Sources */ = {isa = PBXBuildFile; fileRef = F9FB4B611E059186001202B6 /* Protocols_06_lectureTests.m */; };
 		F9FB4B6D1E059186001202B6 /* Protocols_06_lectureUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = F9FB4B6C1E059186001202B6 /* Protocols_06_lectureUITests.m */; };
+		F9FB4B7C1E059510001202B6 /* Student.m in Sources */ = {isa = PBXBuildFile; fileRef = F9FB4B7B1E059510001202B6 /* Student.m */; };
+		F9FB4B7F1E05957C001202B6 /* Danccer.m in Sources */ = {isa = PBXBuildFile; fileRef = F9FB4B7E1E05957C001202B6 /* Danccer.m */; };
+		F9FB4B851E0595FB001202B6 /* Developer.m in Sources */ = {isa = PBXBuildFile; fileRef = F9FB4B841E0595FB001202B6 /* Developer.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +54,13 @@
 		F9FB4B681E059186001202B6 /* Protocols_06_lectureUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Protocols_06_lectureUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		F9FB4B6C1E059186001202B6 /* Protocols_06_lectureUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Protocols_06_lectureUITests.m; sourceTree = "<group>"; };
 		F9FB4B6E1E059186001202B6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F9FB4B7A1E059510001202B6 /* Student.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Student.h; sourceTree = "<group>"; };
+		F9FB4B7B1E059510001202B6 /* Student.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Student.m; sourceTree = "<group>"; };
+		F9FB4B7D1E05957C001202B6 /* Danccer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Danccer.h; sourceTree = "<group>"; };
+		F9FB4B7E1E05957C001202B6 /* Danccer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Danccer.m; sourceTree = "<group>"; };
+		F9FB4B831E0595FB001202B6 /* Developer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Developer.h; path = ../Developer.h; sourceTree = "<group>"; };
+		F9FB4B841E0595FB001202B6 /* Developer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Developer.m; path = ../Developer.m; sourceTree = "<group>"; };
+		F9FB4B861E0598A3001202B6 /* Protocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Protocol.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,8 +111,15 @@
 		F9FB4B461E059186001202B6 /* Protocols_06_lecture */ = {
 			isa = PBXGroup;
 			children = (
+				F9FB4B861E0598A3001202B6 /* Protocol.h */,
 				F9FB4B4A1E059186001202B6 /* AppDelegate.h */,
 				F9FB4B4B1E059186001202B6 /* AppDelegate.m */,
+				F9FB4B831E0595FB001202B6 /* Developer.h */,
+				F9FB4B841E0595FB001202B6 /* Developer.m */,
+				F9FB4B7A1E059510001202B6 /* Student.h */,
+				F9FB4B7B1E059510001202B6 /* Student.m */,
+				F9FB4B7D1E05957C001202B6 /* Danccer.h */,
+				F9FB4B7E1E05957C001202B6 /* Danccer.m */,
 				F9FB4B4D1E059186001202B6 /* ViewController.h */,
 				F9FB4B4E1E059186001202B6 /* ViewController.m */,
 				F9FB4B501E059186001202B6 /* Main.storyboard */,
@@ -273,9 +290,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F9FB4B851E0595FB001202B6 /* Developer.m in Sources */,
 				F9FB4B4F1E059186001202B6 /* ViewController.m in Sources */,
 				F9FB4B4C1E059186001202B6 /* AppDelegate.m in Sources */,
 				F9FB4B491E059186001202B6 /* main.m in Sources */,
+				F9FB4B7C1E059510001202B6 /* Student.m in Sources */,
+				F9FB4B7F1E05957C001202B6 /* Danccer.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -7,6 +7,10 @@
 //
 
 #import "AppDelegate.h"
+#import "Protocol.h"
+#import "Student.h"
+#import "Danccer.h"
+#import "Developer.h"
 
 @interface AppDelegate ()
 
@@ -17,6 +21,73 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
+    
+    
+    Danccer *dancerOne = [[Danccer alloc]init];
+    Danccer *dancerTwo = [[Danccer alloc]init];
+    
+    Student *studentOne = [[Student alloc]init];
+    Student *studentTwo = [[Student alloc]init];
+    Student *studentThree = [[Student alloc]init];
+    
+    Developer *developerMaster = [[Developer alloc]init];
+    
+    dancerOne.name = @"dancerOne";
+    dancerTwo.name = @"dancerTwo";
+    
+    studentOne.name = @"studentOne";
+    studentTwo.name = @"studentTwo";
+    studentThree.name = @"studentThree";
+    
+    developerMaster.name = @"developerMaster";
+    
+    NSObject *fake = [[NSObject alloc]init];    // создаем фейк для проверки
+    
+    NSArray *arrayPatients = @[fake, studentOne,dancerOne, developerMaster, studentTwo, dancerTwo, studentThree];
+    // свойство обязательно для выполнения (@required)
+    
+    for (id <Protocol> patient in arrayPatients) { // каждый patient поддерживает Protocol (протокол)
+        
+        
+        if ([patient conformsToProtocol:@protocol(Protocol)]) {     //делаем проверку, отвечает ли наш пациент протоколу <Protocol>
+            
+            
+            NSLog(@"Patient name - %@", patient.name);
+            //  свойства не оьязательные для проверки @optional
+            if ([patient respondsToSelector:@selector(howIsYourFamily)]) {  // если у объекта пациент есть указатель на селектор (howIsYourFamily)
+                NSLog(@"How is your family? \n%@", [patient howIsYourFamily]);
+            }
+            if ([patient respondsToSelector:@selector(howIsYouJob)]) {  // если метод (howIsYouJob) реализован у пациента (patient)
+                NSLog(@"How is your job? \n%@", [patient howIsYouJob]);     // то мы спрашиваем, как работа твоя
+            }
+            
+            if (![patient areYouOk]) {      // ! если пациент не ок, даем пилюлю
+                [patient takePill];
+                if (![patient areYouOk]) {  // ! если пациент не ок, даем укол
+                    [patient makeShot];
+                }
+            }
+            
+            
+        } else {
+            NSLog(@"FAKE!!!!!!");
+        }
+    }
+    
+    
+            // МЕТОД 2
+//    for (int i = 0; i < [arrayPatients count]; i++) {
+//        id <Protocol> patient = [arrayPatients objectAtIndex:i];
+    
+    
+    
+//    }
+    
+    
+    
+    
+    
+    
     return YES;
 }
 
